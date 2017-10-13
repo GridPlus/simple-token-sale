@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Contracts for fixed-price, finite-supply token sales.",
   "scripts": {
+    "distribute": "truffle exec scripts/distribute.js",
     "test": "node test.js",
     "fix": "eslint --fix",
     "lint": "eslint"
