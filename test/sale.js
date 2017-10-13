@@ -19,7 +19,7 @@ contract('Sale', (accounts) => {
   const timelocksConf = JSON.parse(fs.readFileSync('./conf/timelocks.json'));
   const saleConf = JSON.parse(fs.readFileSync('./conf/sale.json'));
   const tokenConf = JSON.parse(fs.readFileSync('./conf/token.json'));
-  const logs = JSON.parse(fs.readFileSync('./logs/logs.json'));
+  const logs = JSON.parse(fs.readFileSync('./logs_timelocks/logs_timelocks.json'));
   const [owner, james, miguel, edwhale] = accounts;
 
   let tokensForSale;
