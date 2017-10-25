@@ -273,7 +273,7 @@ contract('Sale', (accounts) => {
     it('should not allow a non-owner to change the startBlock.', async () => {
       const sale = await Sale.deployed();
       try {
-        await as(james, sale.startBlock, saleConf.startBlock + 1);
+        await as(james, sale.changeStartBlock, saleConf.startBlock + 1);
       } catch (err) {
         const errMsg = err.toString();
         assert(isEVMException(err), errMsg);
@@ -287,7 +287,7 @@ contract('Sale', (accounts) => {
     it('should not allow a non-owner to change the owner', async () => {
       const sale = await Sale.deployed();
       try {
-        await as(james, sale.owner, james);
+        await as(james, sale.changeOwner, james);
       } catch (err) {
         const errMsg = err.toString();
         assert(isEVMException(err), errMsg);
@@ -301,7 +301,7 @@ contract('Sale', (accounts) => {
     it('should not allow a non-owner to change the wallet', async () => {
       const sale = await Sale.deployed();
       try {
-        await as(james, sale.wallet, james);
+        await as(james, sale.changeWallet, james);
       } catch (err) {
         const errMsg = err.toString();
         assert(isEVMException(err), errMsg);
